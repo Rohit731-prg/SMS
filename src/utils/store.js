@@ -4,6 +4,7 @@ import LibraryReducer from '../features/LibraryList/LibrarySlice'
 import ClassReducer from '../features/class/ClassSlice'
 import ResultReducer from '../features/Result/ResultSlice'
 import StudentReducer from '../features/Student/StudentSlice'
+import TeacherReducer from '../features/Teacher/TeacherSlice'
 
 export const store = configureStore({
   reducer: {
@@ -29,6 +30,7 @@ export const store = configureStore({
     Library: LibraryReducer,
     Class: ClassReducer,
     Result: ResultReducer,
-    Student: StudentReducer
+    Student: StudentReducer,
+    Teacher: TeacherReducer
   },
 })

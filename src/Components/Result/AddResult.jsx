@@ -55,7 +55,7 @@ function AddResult() {
       <Sidebar />
       <div className="w-full h-full flex flex-col">
         <Header />
-        <div className="h-screen p-10 bg-gray-200">
+        <div className="h-screen p-10 bg-gray-200">...
           <p className="text-3xl font-semibold">Add Result</p>
           <div className="mt-5 mb-10 flex flex-row gap-2">
             <Link to="/TeacherDashboard">Home</Link>

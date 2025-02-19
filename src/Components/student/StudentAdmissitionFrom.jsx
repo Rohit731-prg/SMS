@@ -63,6 +63,7 @@ function StudentAdmissionForm() {
       admissionId: "",
       phone: "",
       shortBio: "",
+      photo: null
     });
   };
 
@@ -245,7 +246,7 @@ function StudentAdmissionForm() {
                       Phone <span className="text-red-500">*</span>
                     </label>
                     <input
-                      type="cal"
+                      type="tal"
                       // name={}
                       value={formData.phone}
                       onChange={(e) =>
@@ -311,9 +312,10 @@ function StudentAdmissionForm() {
                   </div>
                   <div>
                     <label className="block text-sm font-medium text-gray-700">
-                      Short BIO
+                      Upload Student Photo
                     </label>
                     <input
+                    onChange={(e) => setFormData({ ...formData, photo: e.target.files[0] })}
                       className="mt-1 block w-full py-3 border-b-2 outline-none border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
                       type="file"
                     />

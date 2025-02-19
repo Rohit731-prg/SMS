@@ -14,6 +14,10 @@ const Sidebar = () => {
         navigate(value);
     }
 
+    const Teacher = (value) => {
+        navigate(value);
+    }
+
     return (
         <div className="flex flex-col sticky top-0 bg-gradient-to-br from-gray-900 to-gray-700 shadow-lg pt-10">
             <div className="w-64 sticky h-screen">
@@ -39,11 +43,27 @@ const Sidebar = () => {
                     <option value="">Student</option>
                     <option value="/FindStudent">All Student</option>
                     <option value="/StudentAdmissitionFrom">Admission Form</option>
+                    <option value="/StudentPromotion">Promotion</option>
                 </select>
+
+                <select 
+                onChange={(e) => Teacher(e.target.value)}
+                className="bg-transparent w-full p-4 flex items-center gap-4 hover:bg-gray-700 transition duration-300 ease-in-out text-white">
+                    <option value="">Teacher</option>
+                    <option value="/AllTeachers">All Teacher</option>
+                    <option value="/AddTeacher">Add Teacher</option>
+                </select>
+
                 <Link to="/notice">
                     <div className="p-4 flex items-center gap-4 hover:bg-gray-700 transition duration-300 ease-in-out">
                         <PiNotificationDuotone className="text-white text-4xl" />
                         <h1 className="text-white text-xl font-semibold">Notice</h1>
+                    </div>
+                </Link>
+                <Link to="/attendance">
+                    <div className="p-4 flex items-center gap-4 hover:bg-gray-700 transition duration-300 ease-in-out">
+                        <PiNotificationDuotone className="text-white text-4xl" />
+                        <h1 className="text-white text-xl font-semibold">Attendance</h1>
                     </div>
                 </Link>
                 <Link to="/exam-schedule">

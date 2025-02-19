@@ -24,6 +24,9 @@ import TeacherDashboard from './Components/Dashboard/TeacherDashboard.jsx'
 import AddResult from './Components/Result/AddResult.jsx'
 import FindStudent from './Components/student/FindStudent.jsx'
 import StudentAdmissitionFrom from './Components/student/StudentAdmissitionFrom.jsx'
+import StudentPromotion from './Components/student/StudentPromotion.jsx'
+import AddTeacher from './Components/Teacher/AddTeacher.jsx'
+import AllTeachers from './Components/Teacher/AllTeachers.jsx'
 
 createRoot(document.getElementById("root")).render(
   <Provider store={store}>
@@ -49,7 +52,10 @@ createRoot(document.getElementById("root")).render(
         <Route path="/Result" element={<AddResult />} />
         <Route path="/FindStudent" element={<FindStudent />} />
         <Route path="/StudentAdmissitionFrom" element={<StudentAdmissitionFrom />} />
-        
+        <Route path="/StudentPromotion" element={<StudentPromotion />} />
+        <Route path="/AddTeacher" element={<AddTeacher />} />
+        <Route path="/AllTeachers" element={<AllTeachers />} />
+
       </Routes>
     </BrowserRouter>
   </Provider>
